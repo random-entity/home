@@ -17,7 +17,7 @@ const iaoTree = new Cat("iao_root", "", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cur", []),
         ]),
-        new Cat("Fine Art", "a", [
+        new Cat("Fine Art", "ar", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cur", []),
         ]),
@@ -39,7 +39,7 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("자료구조 (문봉기)", "das", []),
                 new Cat("컴퓨터구조 (김진수)", "carch", []),
                 new Cat("전기전자회로 (하순회)", "eec", []),
-                new Cat("공학수학 3", "enma3", []),
+                new Cat("공학수학 3 (김찬중)", "enma3", []),
             ], true),
         ]),
         new Cat("Learn", "l", [
@@ -92,7 +92,9 @@ const iaoTree = new Cat("iao_root", "", [
                         new Cat("Foundational HTML/CSS/JavaScript", "fnd", [
                             new Cat("Udemy Course 'The Web Developer Bootcamp 2022' by Colt Steele", "ud_colt-steele", []),
                         ]),
-                        new Cat("Node.js", "nodejs", [])
+                        new Cat("Node.js", "njs", []),
+                        new Cat("Electron.js", "ejs", []),
+                        new Cat("Typescript", "ts", []),
                     ]),
                 ]),
                 new Cat("Digital Signal Processing", "dsp", []),
@@ -112,6 +114,7 @@ const iaoTree = new Cat("iao_root", "", [
                             new Cat("Max/MSP", "max", []),
                             new Cat("ChucK", "ch", []),
                             new Cat("SuperCollider", "sc", []),
+                            new Cat("Teensyduino", "tns", []),
                             new Cat("JUCE", "ju", []),
                         ]),
                         new Cat("Ableton Live 11", "al", []),
@@ -128,17 +131,20 @@ const iaoTree = new Cat("iao_root", "", [
             new Cat("Computer Graphics", "cg", [
                 new Cat("History of Computer Graphics", "his", []),
                 new Cat("OpenGL", "og", []),
+                new Cat("Shader Languages", "sl", []),
                 new Cat("Digital Video Processing", "dvp", []),
             ]),
-            new Cat("Multimedia", "mmd", [
+            new Cat("New Media Art", "nma", [
+                new Cat("History of New Media Art", "his", []),
                 new Cat("Creation Tools", "ct", [
                     new Cat("Processing", "proc", []),
+                    new Cat("Three.js", "3js", []),
                     new Cat("OpenFrameworks", "of", []),
                     new Cat("TouchDesigner", "td", []),
                     new Cat("Unity", "un", []),
                     new Cat("vvvv", "v4", []),
                     new Cat("Houdini", "hdn", []),
-                    new Cat("Blender", "bln", []),
+                    new Cat("Blender", "bl", []),
                     new Cat("After Effects", "ae", []),
                 ]),
             ]),
@@ -147,11 +153,26 @@ const iaoTree = new Cat("iao_root", "", [
     ]),
     new Cat("OUT", "o", [
         new Cat("Projects", "proj", [
-            new Cat("Music & Sound", "mu", []),
-            new Cat("Film & Video", "fv", []),
-            new Cat("Multimedia", "mmd", []),
-            new Cat("Literature", "lit", []),
-            new Cat("Tools", "t", []),
+            new Cat("Music", "mu", [
+                new Cat("Felm (2012)", "felm", []),
+                new Cat("Happy Deathday (2013)", "hd", []),
+                new Cat("Lucid Dreams (2016)", "ld", []),
+                new Cat("병신EP (2019)", "ig", []),
+                new Cat("afyd (TBD)", "afyd", []),
+            ]),
+            new Cat("Film & Video", "fv", [
+                new Cat("있다 (2021)", "itda", []),
+            ]),
+            new Cat("Art & Multimedia", "mmd", [
+                new Cat("공간#1 (2021)", "sp1", []),
+                new Cat("공간#2 (2021)", "sp2", []),
+            ]),
+            new Cat("Literature", "lit", [
+                new Cat("시간#1 (2015)", "t1", []),
+            ]),
+            new Cat("Tools", "t", [
+                new Cat("Hilbert", "hlb", []),
+            ]),
         ]),
         new Cat("Portfolio", "ov", []),
     ])
