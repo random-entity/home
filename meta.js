@@ -179,15 +179,15 @@ const iaoTree = new Cat("iao_root", "", [
 ]);
 
 function objectToNestedDivs(obj, tokenSnake, depth) {
-    var node = document.createElement('div');
-
+    var ul = document.createElement('ul');
     if (depth === 0) {
-        node.setAttribute('class', 'root');
-    } else {
-        node.setAttribute('data-role', 'collapsible');
+        ul.setAttribute('class', 'root');
+    }
+    if (obj.children.length > 0) {
+        ul.classList.add('collapsible');
     }
 
-    var nameSpan = node.appendChild(document.createElement('span'));
+    var nameSpan = ul.appendChild(document.createElement('span'));
     nameSpan.innerHTML = obj.name;
 
     if (depth > 0) {
@@ -201,17 +201,20 @@ function objectToNestedDivs(obj, tokenSnake, depth) {
     tokenSnake += "_" + obj.token;
 
     if (obj.children.length === 0 || obj.hasRepo === true) {
-        var linkSpan = node.appendChild(document.createElement('span'));
+        var linkSpan = ul.appendChild(document.createElement('span'));
         linkSpan.setAttribute("class", "link");
         var repoName = tokenSnake.substring(2);
         linkSpan.innerHTML = `<a class="link" href="https://github.com/random-entity/${repoName}">${repoName}</a>`;
     }
 
     obj.children.forEach(
-        child => node.appendChild(objectToNestedDivs(child, tokenSnake, depth + 1))
+        child => {
+            var li = ul.appendChild(document.createElement('li'));
+            li.appendChild(objectToNestedDivs(child, tokenSnake, depth + 1));
+        }
     );
 
-    return node;
+    return ul;
 }
 
 document.body.appendChild(objectToNestedDivs(iaoTree, "", 0));
