@@ -1,0 +1,39 @@
+div {
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 0em;
+    margin: 0.5em 2em;
+}
+
+span {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.root {
+    border: none;
+    background-color: antiquewhite;
+    margin: 1em;
+    padding: 1em;
+}
+
+.name {
+    background-color: aqua;
+    border-radius: 0.5em;
+    margin: 0em;
+}
+
+.token {
+    background-color: cornsilk;
+    border-radius: 1em;
+    margin: 0em 0.5em 0em 1em;
+    font-family: monospace;
+    font-size: small;
+}
+
+.link {
+    background-color: chartreuse;
+    border-radius: 1em;
+    margin: 0em 1em;
+    font-family: monospace;
+}
