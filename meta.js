@@ -1,9 +1,10 @@
 class Cat {
-    constructor(name, token, children, hasRepo) {
+    constructor(name, token, children, hasRepo, extLinks) {
         this.name = name;
         this.token = token;
         this.children = children;
         this.hasRepo = hasRepo;
+        this.extLinks = extLinks;
     }
 }
 
@@ -12,12 +13,12 @@ const iaoTree = new Cat("iao_root", "", [
         new Cat("Music", "mu", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cur", []),
-        ]),
-        new Cat("Film & Video", "fv", [
+        ], true),
+        new Cat("Film", "f", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cur", []),
         ]),
-        new Cat("Fine Art", "ar", [
+        new Cat("Art", "a", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cur", []),
         ]),
@@ -32,12 +33,12 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Linear Algebra", "linal", []),
                 new Cat("Set Theory", "set", []),
                 new Cat("Calculus", "cal", [
-                    new Cat("Calculus I & II by Kim Hongjong", "khj", []),
+                    new Cat("'Calculus I & II' by Kim Hongjong", "khj", []),
                 ]),
                 new Cat("Real Analysis", "ran", [
-                    new Cat("해석개론 by 김-김-계", "ggg", []),
-                    new Cat("Principles of Mathematical Analysis by Rudin", "rudin", []),
-                    new Cat("Elementary Classical Analysis by Marsden", "marsden", []),
+                    new Cat("'해석개론' by 김-김-계", "ggg", []),
+                    new Cat("'Principles of Mathematical Analysis' by Rudin", "rudin", []),
+                    new Cat("'Elementary Classical Analysis' by Marsden", "marsden", []),
                 ]),
                 new Cat("Complex Analysis", "can", []),
                 new Cat("Differential Equations", "deq", []),
@@ -47,9 +48,9 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Number Theory", "num", []),
                 new Cat("Discrete Mathematics", "dma", []),
                 new Cat("Engineering Mathematics", "en", [
-                    new Cat("SNUON 공학수학 1", "snu1", []),
-                    new Cat("SNUON 공학수학 2", "snu2", []),
-                    new Cat("피토스터디 공학수학 3", "snu3", []),
+                    new Cat("SNUON '공학수학 1'", "snu1", []),
+                    new Cat("SNUON '공학수학 2'", "snu2", []),
+                    new Cat("피토스터디 '공학수학 3'", "snu3", []),
                 ]),
             ]),
             new Cat("Computer Science & Engineering", "cse", [
@@ -75,7 +76,10 @@ const iaoTree = new Cat("iao_root", "", [
                     ]),
                     new Cat("Web Development", "web", [
                         new Cat("Foundational HTML/CSS/JavaScript", "fnd", [
-                            new Cat("Udemy Course 'The Web Developer Bootcamp 2022' by Colt Steele", "ud_colt-steele", []),
+                            new Cat("Udemy Course 'The Web Developer Bootcamp 2022' by Colt Steele", "ud_colt-steele", [], true, [{
+                                title: "Udemy",
+                                url: "https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/",
+                            }]),
                         ]),
                         new Cat("Node.js", "njs", []),
                         new Cat("Electron.js", "ejs", []),
@@ -84,7 +88,7 @@ const iaoTree = new Cat("iao_root", "", [
                 ]),
                 new Cat("Digital Signal Processing", "dsp", []),
             ]),
-            new Cat("Music", "mu", [
+            new Cat("Music & Sound", "mu", [
                 new Cat("Performance", "perf", []),
                 new Cat("Music Theory & Analysis", "than", []),
                 new Cat("Music History", "his", []),
@@ -94,16 +98,29 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("History of Electronic Music", "his", []),
                     new Cat("Audio Programming", "aup", [
                         new Cat("Max/MSP", "max", [
-                            new Cat("Kadenze Course 'Max MSP Programming Course: Structuring Interactive Software for Digital Arts' by Matt Wright", "kdz_matt-wright", []),
+                            new Cat("Kadenze Course 'Max MSP Programming Course: Structuring Interactive Software for Digital Arts' by Matt Wright", "kdz_matt-wright", [], true, [{
+                                title: "Kadenze",
+                                url: "https://www.kadenze.com/courses/max-msp-programming-course-structuring-interactive-software-for-digital-arts/sessions",
+                            }]),
                         ]),
-                        new Cat("ChucK", "ch", []),
+                        new Cat("ChucK", "ch", [
+                            new Cat("Kadenze Course 'Introduction to Real-Time Audio Programming in ChucK' by Ajay Kapur", "kdz_ajay-kapur", [], true, [{
+                                title: "Kadenze",
+                                url: "https://www.kadenze.com/courses/introduction-to-real-time-audio-programming-in-chuck/sessions",
+                            }])
+                        ]),
                         new Cat("SuperCollider", "sc", []),
                         new Cat("Teensyduino", "tns", []),
-                        new Cat("JUCE", "ju", []),
+                        new Cat("JUCE", "ju", [
+                            new Cat("Kadenze Course 'Intro to Audio Plugin Development' by Output Developer Jacob Penn", "kdz_output", [], true, [{
+                                title: "Kadenze",
+                                url: "https://www.kadenze.com/courses/intro-to-audio-plugin-development/sessions",
+                            }]),
+                        ]),
                     ]),
                     new Cat("Creation Tools", "ct", [
                         new Cat("Ableton Live 11", "al", []),
-                        new Cat("Logic Pro X", "lo", []),
+                        new Cat("Logic Pro X", "lpx", []),
                         new Cat("Native Instruments Komplete 13", "ni", [
                             new Cat("Kontakt", "k", []),
                             new Cat("Reaktor", "r", []),
@@ -122,7 +139,11 @@ const iaoTree = new Cat("iao_root", "", [
             new Cat("New Media Art", "nma", [
                 new Cat("History of New Media Art", "his", []),
                 new Cat("Creation Tools", "ct", [
-                    new Cat("Processing", "proc", []),
+                    new Cat("Processing", "proc", [
+                        new Cat("'Learning Processing' by Daniel Shiffman", "shiffman_lp", []),
+                        new Cat("'The Nature of Code' by Daniel Shiffman", "shiffman_nc", []),
+                    ]),
+                    new Cat("p5.js", "p5", []),
                     new Cat("Three.js", "3js", []),
                     new Cat("OpenFrameworks", "of", []),
                     new Cat("TouchDesigner", "td", []),
@@ -131,6 +152,11 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("Houdini", "hdn", []),
                     new Cat("Blender", "bl", []),
                     new Cat("After Effects", "ae", []),
+                ]),
+            ]),
+            new Cat("Languages", "lang", [
+                new Cat("Japanese", "jp", [
+                    new Cat("EBSi 2023 수능 강의", "ebsi23", []),
                 ]),
             ]),
         ]),
@@ -168,16 +194,23 @@ const iaoTree = new Cat("iao_root", "", [
         ]),
         new Cat("Portfolio", "ov", [
             new Cat("Music", "mu", [
-                new Cat("Felm (2012)", "felm", []),
+                new Cat("Felm (2012)", "felm", [], true, [{
+                    title: "Bandcamp",
+                    url: "https://yakpanteki.bandcamp.com/album/felm",
+                }]),
                 new Cat("Happy Deathday (2013)", "hd", []),
                 new Cat("Lucid Dreams (2016)", "ld", []),
-                new Cat("병신EP (2019)", "ig", []),
+                new Cat("병신EP (2019)", "ig", [], true, [{
+                    title: "Bandcamp",
+                    url: "https://yakpanteki.bandcamp.com/album/ep",
+                }]),
                 new Cat("afyd (TBD)", "afyd", []),
             ]),
             new Cat("Art", "a", [
                 new Cat("공간#1 (2021)", "sp1", []),
-                new Cat("공간#2 (2021)", "sp2", []),
                 new Cat("시간#3 (2021)", "t3", []),
+                new Cat("원 (2021, 공동작업)", "sowon-network", []),
+                new Cat("공간#2 (2021)", "sp2", []),
             ]),
             new Cat("Film", "f", [
                 new Cat("있다 (2021)", "itda", []),
@@ -222,10 +255,18 @@ function objectToNestedDivs(obj, tokenSnake, depth) {
     tokenSnake += "_" + obj.token;
 
     if (obj.children.length === 0 || obj.hasRepo === true) {
-        var linkSpan = bar.appendChild(document.createElement('span'));
-        linkSpan.classList.add("link");
+        var ghLinkSpan = bar.appendChild(document.createElement('span'));
+        ghLinkSpan.classList.add('link', 'github-link');
         var repoName = tokenSnake.substring(2);
-        linkSpan.innerHTML = `<a class="link" href="https://github.com/random-entity/${repoName}">${repoName}</a>`;
+        ghLinkSpan.innerHTML = `<a href="https://github.com/random-entity/${repoName}">${repoName}</a>`;
+    }
+
+    if (obj.extLinks && Array.isArray(obj.extLinks)) {
+        obj.extLinks.forEach(extLink => {
+            var extLinkSpan = bar.appendChild(document.createElement('span'));
+            extLinkSpan.classList.add('link', 'external-link');
+            extLinkSpan.innerHTML = `<a href="${extLink.url}">${extLink.title}</a>`;
+        })
     }
 
     obj.children.forEach(

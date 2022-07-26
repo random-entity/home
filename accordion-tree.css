@@ -39,6 +39,10 @@ span {
     font-family: monospace;
 }
 
+.external-link {
+    background-color:turquoise;
+}
+
 .inactive {
     display: none;
 }
