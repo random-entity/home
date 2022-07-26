@@ -145,6 +145,12 @@ const iaoTree = new Cat("iao_root", "", [
                     ]),
                     new Cat("p5.js", "p5", []),
                     new Cat("Three.js", "3js", []),
+                    new Cat("JavaScript", "js", [
+                        new Cat("Domestika Course 'Creative Coding: Making Visuals with JavaScript' by Bruno Imbrizi", "dom_bruno-imbrizi", [], true, [{
+                            title: "Domestika",
+                            url: "https://www.domestika.org/en/courses/2729-creative-coding-making-visuals-with-javascript",
+                        }])
+                    ]),
                     new Cat("OpenFrameworks", "of", []),
                     new Cat("TouchDesigner", "td", []),
                     new Cat("Unity", "un", []),
