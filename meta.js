@@ -27,21 +27,6 @@ const iaoTree = new Cat("iao_root", "", [
         ]),
     ]),
     new Cat("ACTION", "a", [
-        new Cat("SNU", "snu", [
-            new Cat("2021-2", "2021-2", [], true),
-            new Cat("2022-1", "2022-1", [
-                new Cat("이산수학 (문봉기)", "dma", []),
-                new Cat("컴퓨터프로그래밍 (이재욱)", "cp", []),
-                new Cat("논리설계 (이창건)", "lcd", []),
-                new Cat("고급수학 및 연습 1 (조철현, 류지연)", "hc", []),
-            ], true),
-            new Cat("2022-2", "2022-2", [
-                new Cat("자료구조 (문봉기)", "das", []),
-                new Cat("컴퓨터구조 (김진수)", "carch", []),
-                new Cat("전기전자회로 (하순회)", "eec", []),
-                new Cat("공학수학 3 (김찬중)", "enma3", []),
-            ], true),
-        ]),
         new Cat("Learn", "l", [
             new Cat("Mathematics", "ma", [
                 new Cat("Linear Algebra", "linal", []),
@@ -104,19 +89,19 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Music Theory & Analysis", "than", []),
                 new Cat("Music History", "his", []),
                 new Cat("Electronic Music", "e", [
-                    new Cat("Theoretical Foundations", "fnd", [
-                        new Cat("Digital Audio Processing", "dap", []),
-                        new Cat("Sound Systhesis & Audio Effects", "synfx", []),
-                        new Cat("History of Electronic Music", "his", []),
+                    new Cat("Digital Audio Processing", "dap", []),
+                    new Cat("Sound Systhesis & Audio Effects", "synfx", []),
+                    new Cat("History of Electronic Music", "his", []),
+                    new Cat("Audio Programming", "aup", [
+                        new Cat("Max/MSP", "max", [
+                            new Cat("Kadenze Course 'Max MSP Programming Course: Structuring Interactive Software for Digital Arts' by Matt Wright", "kdz_matt-wright", []),
+                        ]),
+                        new Cat("ChucK", "ch", []),
+                        new Cat("SuperCollider", "sc", []),
+                        new Cat("Teensyduino", "tns", []),
+                        new Cat("JUCE", "ju", []),
                     ]),
                     new Cat("Creation Tools", "ct", [
-                        new Cat("Audio Programming", "aup", [
-                            new Cat("Max/MSP", "max", []),
-                            new Cat("ChucK", "ch", []),
-                            new Cat("SuperCollider", "sc", []),
-                            new Cat("Teensyduino", "tns", []),
-                            new Cat("JUCE", "ju", []),
-                        ]),
                         new Cat("Ableton Live 11", "al", []),
                         new Cat("Logic Pro X", "lo", []),
                         new Cat("Native Instruments Komplete 13", "ni", [
@@ -148,22 +133,53 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("After Effects", "ae", []),
                 ]),
             ]),
-
+        ]),
+        new Cat("SNU", "snu", [
+            new Cat("2021-2", "2021-2", [], true),
+            new Cat("2022-1", "2022-1", [
+                new Cat("이산수학 (문봉기)", "dma", []),
+                new Cat("컴퓨터프로그래밍 (이재욱)", "cp", []),
+                new Cat("논리설계 (이창건)", "lcd", []),
+                new Cat("고급수학 및 연습 1 (조철현, 류지연)", "hc", []),
+            ], true),
+            new Cat("2022-2", "2022-2", [
+                new Cat("자료구조 (문봉기)", "das", []),
+                new Cat("컴퓨터구조 (김진수)", "carch", []),
+                new Cat("전기전자회로 (하순회)", "eec", []),
+                new Cat("공학수학 3 (김찬중)", "enma3", []),
+            ], true),
         ]),
     ]),
     new Cat("OUT", "o", [
         new Cat("Projects", "proj", [
-            new Cat("Music & Sound", "mu", [
+            new Cat("Music Creation", "muc", [
+                new Cat("Meta Workflow Guide", "meta", [
+                    new Cat("Ableton Live", "al", []),
+                    new Cat("Logic Pro X", "lpx", []),
+                    new Cat("Native Instruments", "ni", []),
+                    new Cat("iZotope", "iz", []),
+                    new Cat("_Wishlist", "wl", []),
+                ], true),
+                new Cat("Session 2011-2013", "s11-13", []),
+                new Cat("Session 2014-2016", "s14-16", []),
+                new Cat("Session 2017-2019", "s17-19", []),
+                new Cat("Session 2020-2022", "s20-22", []),
+            ]),
+        ]),
+        new Cat("Portfolio", "ov", [
+            new Cat("Music", "mu", [
                 new Cat("Felm (2012)", "felm", []),
                 new Cat("Happy Deathday (2013)", "hd", []),
                 new Cat("Lucid Dreams (2016)", "ld", []),
                 new Cat("병신EP (2019)", "ig", []),
                 new Cat("afyd (TBD)", "afyd", []),
             ]),
-            new Cat("Art & Film", "a", [
+            new Cat("Art", "a", [
                 new Cat("공간#1 (2021)", "sp1", []),
                 new Cat("공간#2 (2021)", "sp2", []),
                 new Cat("시간#3 (2021)", "t3", []),
+            ]),
+            new Cat("Film", "f", [
                 new Cat("있다 (2021)", "itda", []),
             ]),
             new Cat("Literature", "lit", [
@@ -173,7 +189,6 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Hilbert", "hlb", []),
             ]),
         ]),
-        new Cat("Portfolio", "ov", []),
     ])
 ]);
 
