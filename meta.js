@@ -153,19 +153,18 @@ const iaoTree = new Cat("iao_root", "", [
     ]),
     new Cat("OUT", "o", [
         new Cat("Projects", "proj", [
-            new Cat("Music", "mu", [
+            new Cat("Music & Sound", "mu", [
                 new Cat("Felm (2012)", "felm", []),
                 new Cat("Happy Deathday (2013)", "hd", []),
                 new Cat("Lucid Dreams (2016)", "ld", []),
                 new Cat("병신EP (2019)", "ig", []),
                 new Cat("afyd (TBD)", "afyd", []),
             ]),
-            new Cat("Film & Video", "fv", [
-                new Cat("있다 (2021)", "itda", []),
-            ]),
-            new Cat("Art & Multimedia", "mmd", [
+            new Cat("Art & Film", "a", [
                 new Cat("공간#1 (2021)", "sp1", []),
                 new Cat("공간#2 (2021)", "sp2", []),
+                new Cat("시간#3 (2021)", "t3", []),
+                new Cat("있다 (2021)", "itda", []),
             ]),
             new Cat("Literature", "lit", [
                 new Cat("시간#1 (2015)", "t1", []),
@@ -181,15 +180,22 @@ const iaoTree = new Cat("iao_root", "", [
 function objectToNestedDivs(obj, tokenSnake, depth) {
     var ul = document.createElement('ul');
     if (depth === 0) {
-        ul.setAttribute('class', 'root');
+        ul.classList.add('root');
     }
+
+    var bar = ul.appendChild(document.createElement('div'));
     if (obj.children.length > 0) {
-        ul.classList.add('collapsible');
+        bar.classList.add('collapseTrigger');
+    }
+    if (depth > 0) {
+        ul.classList.add('nested');
+    }
+    if (depth > 1) {
+        ul.classList.add('inactive');
     }
 
-    var nameSpan = ul.appendChild(document.createElement('span'));
+    var nameSpan = bar.appendChild(document.createElement('span'));
     nameSpan.innerHTML = obj.name;
-
     if (depth > 0) {
         nameSpan.setAttribute('class', 'name');
 
@@ -201,8 +207,8 @@ function objectToNestedDivs(obj, tokenSnake, depth) {
     tokenSnake += "_" + obj.token;
 
     if (obj.children.length === 0 || obj.hasRepo === true) {
-        var linkSpan = ul.appendChild(document.createElement('span'));
-        linkSpan.setAttribute("class", "link");
+        var linkSpan = bar.appendChild(document.createElement('span'));
+        linkSpan.classList.add("link");
         var repoName = tokenSnake.substring(2);
         linkSpan.innerHTML = `<a class="link" href="https://github.com/random-entity/${repoName}">${repoName}</a>`;
     }

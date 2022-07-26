@@ -38,3 +38,7 @@ span {
     margin: 0em 1em;
     font-family: monospace;
 }
+
+.inactive {
+    display: none;
+}
