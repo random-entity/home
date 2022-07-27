@@ -12,25 +12,33 @@ const iaoTree = new Cat("iao_root", "", [
     new Cat("IN", "i", [
         new Cat("Music", "mu", [
             new Cat("Database", "db", []),
-            new Cat("Curation", "cur", []),
+            new Cat("Curation", "cu", []),
         ], true),
         new Cat("Film", "f", [
             new Cat("Database", "db", []),
-            new Cat("Curation", "cur", []),
+            new Cat("Curation", "cu", []),
         ]),
         new Cat("Art", "a", [
             new Cat("Database", "db", []),
-            new Cat("Curation", "cur", []),
+            new Cat("Curation", "cu", []),
         ]),
         new Cat("Literature", "l", [
             new Cat("Database", "db", []),
-            new Cat("Curation", "cur", []),
+            new Cat("Curation", "cu", []),
         ]),
     ]),
     new Cat("ACTION", "a", [
         new Cat("Learn", "l", [
             new Cat("Mathematics", "ma", [
-                new Cat("Linear Algebra", "linal", []),
+                new Cat("Linear Algebra", "linal", [
+                    new Cat("MIT OpenCourseware 'Linear Algebra' by Gilbert Strang", "mit_strang", [], true, [{
+                        title: "MIT OCW",
+                        url: "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+                    }, {
+                        title: "YouTube",
+                        url: "https://www.youtube.com/playlist?list=PL221E2BBF13BECF6C",
+                    }])
+                ]),
                 new Cat("Set Theory", "set", []),
                 new Cat("Calculus", "cal", [
                     new Cat("'Calculus I & II' by Kim Hongjong", "khj", []),
@@ -41,17 +49,36 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("'Elementary Classical Analysis' by Marsden", "marsden", []),
                 ]),
                 new Cat("Complex Analysis", "can", []),
-                new Cat("Differential Equations", "deq", []),
+                new Cat("Differential Equations", "deq", [
+                    new Cat("MIT OpenCourseware 'Differential Equations' by Arthur Mattuck", "mit_mattuck", [], true, [{
+                        title: "MIT OCW",
+                        url: "https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/",
+                    }, {
+                        title: "YouTube",
+                        url: "https://www.youtube.com/playlist?list=PLEC88901EBADDD980",
+                    }]),
+                    new Cat("MIT OpenCourseware 'Learn Differential Equations: Up Close with Gilbert Strang and Cleve Moler'", "mit_strang-moler", [], true, [{
+                        title: "MIT OCW",
+                        url: "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/",
+                    }, {
+                        title: "YouTube",
+                        url: "https://www.youtube.com/playlist?list=PLUl4u3cNGP63oTpyxCMLKt_JmB0WtSZfG",
+                    }]),
+                ]),
                 new Cat("Differential Geometry", "dg", []),
                 new Cat("Abstract Algebra", "aal", []),
                 new Cat("Topology", "top", []),
                 new Cat("Number Theory", "num", []),
                 new Cat("Discrete Mathematics", "dma", []),
-                new Cat("Engineering Mathematics", "en", [
+                new Cat("Engineering Math", "en", [
                     new Cat("SNUON '공학수학 1'", "snu1", []),
                     new Cat("SNUON '공학수학 2'", "snu2", []),
-                    new Cat("피토스터디 '공학수학 3'", "snu3", []),
+                    new Cat("피토스터디 '공학수학 3 (수치해석)'", "snu3", [], true, [{
+                        title: "YouTube",
+                        url: "https://www.youtube.com/playlist?list=PLIxff5DJJR7pETq1VTuA27LpFQMEURErF",
+                    }]),
                 ]),
+                new Cat("A Curation of Fun Math Videos", "fun-cu", []),
             ]),
             new Cat("Computer Science & Engineering", "cse", [
                 new Cat("Computer Programming", "p", [
@@ -62,7 +89,16 @@ const iaoTree = new Cat("iao_root", "", [
                 ]),
                 new Cat("Logic Circuit Design", "lcd", []),
                 new Cat("Electronic & Electrical Circuits", "eec", []),
-                new Cat("Data Structures", "das", []),
+                new Cat("Data Structures", "das", [
+                    new Cat("Udemy Course 'Master the Coding Interview: Data Structures + Algorithms' by Andrei Neagoie", "ud_neagoie", [], [{
+                        title: "Udemy",
+                        url: "https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/",
+                    }]),
+                    new Cat("Udemy Course 'JavaScript Algorithms and Data Structures Masterclass' by Colt Steele", "ud_colt-steele", [], [{
+                        title: "Udemy",
+                        url: "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/",
+                    }]),
+                ]),
                 new Cat("Computer Architecture", "carch", []),
                 new Cat("Systems Programming", "syspr", []),
                 new Cat("Algorithms", "alg", []),
@@ -78,22 +114,44 @@ const iaoTree = new Cat("iao_root", "", [
                         new Cat("Foundational HTML/CSS/JavaScript", "fnd", [
                             new Cat("Udemy Course 'The Web Developer Bootcamp 2022' by Colt Steele", "ud_colt-steele", [], true, [{
                                 title: "Udemy",
-                                url: "https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/",
+                                url: "https://www.udemy.com/course/the-web-developer-bootcamp/learn/",
                             }]),
                         ]),
-                        new Cat("Node.js", "njs", []),
-                        new Cat("Electron.js", "ejs", []),
+                        new Cat("Node.js", "njs", [
+                            new Cat("Udemy Course 'Understanding NPM - Node.js Package Manager' by Bogdan Stashchuk", "ud_stashchuk", [], true, [{
+                                title: "Udemy",
+                                url: "https://www.udemy.com/course/understanding-npm/learn/",
+                            }])
+                        ]),
+                        new Cat("Electron.js", "ejs", [
+                            new Cat("Udemy Course 'Master Electron: Desktop Apps with HTML, JavaScript & CSS' by Ray Viljoen", "ud_viljoen", [], true, [{
+                                title: "Udemy",
+                                url: "https://www.udemy.com/course/master-electron/learn/",
+                            }])
+                        ]),
                         new Cat("Typescript", "ts", []),
                     ]),
                 ]),
                 new Cat("Digital Signal Processing", "dsp", []),
             ]),
             new Cat("Music & Sound", "mu", [
-                new Cat("Performance", "perf", []),
-                new Cat("Music Theory & Analysis", "than", []),
+                new Cat("Performance", "pf", [
+                    new Cat("Voice", "v", []),
+                    new Cat("Guitar", "gt", []),
+                ]),
+                new Cat("Music Theory", "th", []),
+                new Cat("Case Analyses", "an", []),
                 new Cat("Music History", "his", []),
                 new Cat("Electronic Music", "e", [
-                    new Cat("Digital Audio Processing", "dap", []),
+                    new Cat("Audio Signal Processing", "audsp", [
+                        new Cat("Coursera Course 'Digital Signal Processing 1: Basic Concepts and Algorithms' by École Polytechnique Fédérale de Lausanne", "crs_epfl-1", [], true, [{
+                            title: "Coursera",
+                            url: "https://www.coursera.org/learn/dsp1/home/",
+                        }])
+                    ], false, [{
+                        title: "metaguide",
+                        url: "https://dsp.stackexchange.com/questions/9194/learning-roadmap-for-the-audio-signal-processing-beginner",
+                    }]),
                     new Cat("Sound Systhesis & Audio Effects", "synfx", []),
                     new Cat("History of Electronic Music", "his", []),
                     new Cat("Audio Programming", "aup", [
@@ -121,12 +179,25 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("Creation Tools", "ct", [
                         new Cat("Ableton Live 11", "al", []),
                         new Cat("Logic Pro X", "lpx", []),
-                        new Cat("Native Instruments Komplete 13", "ni", [
-                            new Cat("Kontakt", "k", []),
-                            new Cat("Reaktor", "r", []),
+                        new Cat("Native Instruments", "ni", [
+                            new Cat("Kontakt", "k", [
+                                new Cat("Kadenze Course 'Sound Design with Kontakt' by Loudon Stearns from Berklee College of Music", "kdz_bcm", [], true, [{
+                                    title: "Kadenze",
+                                    url: "https://www.kadenze.com/courses/sound-design-with-kontakt-i/sessions",
+                                }])
+                            ]),
+                            new Cat("Reaktor", "r", [
+                                new Cat("Kadenze Course 'Sound Synthesis Using Reaktor' by Owen Vallis from CalArts", "kdz_cal", [], true, [{
+                                    title: "Kadenze",
+                                    url: "https://www.kadenze.com/courses/sound-synthesis-using-reaktor-vi/sessions",
+                                }])
+                            ]),
                             new Cat("Absynth", "ab", []),
+                            new Cat("Massive", "ma", []),
+                            new Cat("Massive X", "mx", []),
                         ]),
                         new Cat("Xfer Serum", "ser", []),
+                        new Cat("Spectrasonics Omnisphere 2", "omni", []),
                     ]),
                 ]),
             ]),
@@ -153,7 +224,12 @@ const iaoTree = new Cat("iao_root", "", [
                     ]),
                     new Cat("OpenFrameworks", "of", []),
                     new Cat("TouchDesigner", "td", []),
-                    new Cat("Unity", "un", []),
+                    new Cat("Unity", "un", [
+                        new Cat("Catlike Coding", "clc", [], true, [{
+                            title: "Catlike Coding",
+                            url: "https://catlikecoding.com/unity/tutorials/",
+                        }])
+                    ]),
                     new Cat("vvvv", "v4", []),
                     new Cat("Houdini", "hdn", []),
                     new Cat("Blender", "bl", []),
@@ -184,7 +260,7 @@ const iaoTree = new Cat("iao_root", "", [
     ]),
     new Cat("OUT", "o", [
         new Cat("Projects", "proj", [
-            new Cat("Music Creation", "muc", [
+            new Cat("Music", "mu", [
                 new Cat("Meta Workflow Guide", "meta", [
                     new Cat("Ableton Live", "al", []),
                     new Cat("Logic Pro X", "lpx", []),
@@ -196,6 +272,11 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Session 2014-2016", "s14-16", []),
                 new Cat("Session 2017-2019", "s17-19", []),
                 new Cat("Session 2020-2022", "s20-22", []),
+            ]),
+            new Cat("Art", "a", []),
+            new Cat("Film", "f", []),
+            new Cat("Tools", "t", [
+                new Cat("Hilbert", "hlb", []),
             ]),
         ]),
         new Cat("Portfolio", "ov", [
@@ -223,9 +304,6 @@ const iaoTree = new Cat("iao_root", "", [
             ]),
             new Cat("Literature", "lit", [
                 new Cat("시간#1 (2015)", "t1", []),
-            ]),
-            new Cat("Tools", "t", [
-                new Cat("Hilbert", "hlb", []),
             ]),
         ]),
     ])
