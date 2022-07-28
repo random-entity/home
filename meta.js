@@ -259,15 +259,18 @@ const iaoTree = new Cat("iao_root", "", [
         ]),
     ]),
     new Cat("OUT", "o", [
+        new Cat("Meta (Gears Inventory, Workflow & Guide)", "meta", [
+            new Cat("Music", "mu", [
+                new Cat("Ableton Live", "al", []),
+                new Cat("Logic Pro X", "lpx", []),
+                new Cat("Native Instruments", "ni", []),
+                new Cat("iZotope", "iz", []),
+                new Cat("_Wishlist", "wl", []),
+            ], true),
+        ]),
         new Cat("Projects", "proj", [
             new Cat("Music", "mu", [
-                new Cat("Meta Workflow Guide", "meta", [
-                    new Cat("Ableton Live", "al", []),
-                    new Cat("Logic Pro X", "lpx", []),
-                    new Cat("Native Instruments", "ni", []),
-                    new Cat("iZotope", "iz", []),
-                    new Cat("_Wishlist", "wl", []),
-                ], true),
+
                 new Cat("Session 2011-2013", "s11-13", []),
                 new Cat("Session 2014-2016", "s14-16", []),
                 new Cat("Session 2017-2019", "s17-19", []),
