@@ -30,7 +30,7 @@ const iaoTree = new Cat("iao_root", "", [
     new Cat("ACTION", "a", [
         new Cat("Learn", "l", [
             new Cat("Mathematics", "ma", [
-                new Cat("Linear Algebra", "linal", [
+                new Cat("Linear Algebra", "lin", [
                     new Cat("MIT OpenCourseware 'Linear Algebra' by Gilbert Strang", "mit_strang", [], true, [{
                         title: "MIT OCW",
                         url: "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
@@ -49,7 +49,7 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("'Elementary Classical Analysis' by Marsden", "marsden", []),
                 ]),
                 new Cat("Complex Analysis", "can", []),
-                new Cat("Differential Equations", "deq", [
+                new Cat("Differential Equations", "de", [
                     new Cat("MIT OpenCourseware 'Differential Equations' by Arthur Mattuck", "mit_mattuck", [], true, [{
                         title: "MIT OCW",
                         url: "https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/",
@@ -75,20 +75,20 @@ const iaoTree = new Cat("iao_root", "", [
                         title: "SNUON",
                         url: "http://etl.snu.ac.kr/course/view.php?id=215961",
                     }]),
-                    new Cat("SNUON '공학수학 2'", "snu-2", []),
+                    new Cat("SNUON '공학수학 2' by (TBD)", "snu-2_(tbd)", []),
                 ]),
-                new Cat("A Curation of Fun Math Videos", "fun-cu", []),
+                new Cat("A Curation of Fun Math Resources", "fun-cu", []),
             ]),
             new Cat("Computer Science & Engineering", "cse", [
+                new Cat("Logic Circuit Design", "lcd", []),
+                new Cat("Electronic & Electrical Circuits", "eec", []),
                 new Cat("Computer Programming", "p", [
                     new Cat("C", "c", []),
                     new Cat("C++", "cpp", []),
                     new Cat("Java", "java", []),
                     new Cat("Python", "py", []),
                 ]),
-                new Cat("Logic Circuit Design", "lcd", []),
-                new Cat("Electronic & Electrical Circuits", "eec", []),
-                new Cat("Data Structures", "das", [
+                new Cat("Data Structures & Algorithms", "das-alg", [
                     new Cat("Udemy Course 'Master the Coding Interview: Data Structures + Algorithms' by Andrei Neagoie", "ud_neagoie", [], [{
                         title: "Udemy",
                         url: "https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/",
@@ -100,7 +100,6 @@ const iaoTree = new Cat("iao_root", "", [
                 ]),
                 new Cat("Computer Architecture", "carch", []),
                 new Cat("Systems Programming", "syspr", []),
-                new Cat("Algorithms", "alg", []),
                 new Cat("Operating Systems", "os", []),
                 new Cat("Theory of Programming Languages", "thlang", []),
                 new Cat("Database", "db", []),
@@ -128,6 +127,7 @@ const iaoTree = new Cat("iao_root", "", [
                                 url: "https://www.udemy.com/course/master-electron/learn/",
                             }])
                         ]),
+                        new Cat("React", "react", []),
                         new Cat("Typescript", "ts", []),
                     ]),
                 ]),
@@ -200,14 +200,15 @@ const iaoTree = new Cat("iao_root", "", [
                     ]),
                 ]),
             ]),
-            new Cat("Computer Graphics", "cg", [
-                new Cat("History of Computer Graphics", "his", []),
-                new Cat("OpenGL", "og", []),
-                new Cat("Shader Languages", "sl", []),
-                new Cat("Digital Video Processing", "dvp", []),
-            ]),
-            new Cat("New Media Art", "nma", [
-                new Cat("History of New Media Art", "his", []),
+            new Cat("Computer-Aided Art", "caa", [
+                new Cat("History of New Media Art", "nma-his", []),
+                new Cat("Computer Graphics", "cg", [
+                    new Cat("History of Computer Graphics", "his", []),
+                    new Cat("OpenGL", "og", []),
+                    new Cat("Shader Languages", "sl", []),
+                    new Cat("Digital Video Processing", "dvp", []),
+                ]),
+                new Cat("Mathematical Visualization", "mavi", []),
                 new Cat("Creation Tools", "ct", [
                     new Cat("Processing", "proc", [
                         new Cat("'Learning Processing' by Daniel Shiffman", "shiffman_lp", []),
@@ -264,13 +265,10 @@ const iaoTree = new Cat("iao_root", "", [
     new Cat("OUT", "o", [
         new Cat("Meta (Gears Inventory, Workflow & Guide)", "meta", [
             new Cat("Music", "mu", [
-                new Cat("Ableton Live 11", "al", []),
-                new Cat("Logic Pro X", "lpx", []),
-                new Cat("Native Instruments", "ni", []),
-                new Cat("iZotope", "iz", []),
-                new Cat("Omnisphere 2", "omni", []),
-                new Cat("Xfer Serum", "ser", []),
-                new Cat("_Wishlist", "wl", []),
+                new Cat("Softwares", "sw", [
+                    new Cat("DAWs", "daw", []),
+                    new Cat("Plugins", "pl", []),
+                ]),
             ], true),
         ]),
         new Cat("Projects", "proj", [
