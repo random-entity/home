@@ -271,6 +271,7 @@ const iaoTree = new Cat("iao_root", "", [
                 ]),
             ], true),
         ]),
+        new Cat("Modules", "mod", []),
         new Cat("Projects", "proj", [
             new Cat("Music", "mu", [
                 new Cat("Session 2011-2013", "s11-13", []),
