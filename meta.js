@@ -70,13 +70,12 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Topology", "top", []),
                 new Cat("Number Theory", "num", []),
                 new Cat("Discrete Mathematics", "dma", []),
-                new Cat("Engineering Math", "en", [
-                    new Cat("SNUON '공학수학 1'", "snu1", []),
-                    new Cat("SNUON '공학수학 2'", "snu2", []),
-                    new Cat("피토스터디 '공학수학 3 (수치해석)'", "snu3", [], true, [{
-                        title: "YouTube",
-                        url: "https://www.youtube.com/playlist?list=PLIxff5DJJR7pETq1VTuA27LpFQMEURErF",
+                new Cat("Engineering Mathematics", "en", [
+                    new Cat("SNUON '공학수학 1' by 심형보", "snu-1_shb", [], true, [{
+                        title: "SNUON",
+                        url: "http://etl.snu.ac.kr/course/view.php?id=215961",
                     }]),
+                    new Cat("SNUON '공학수학 2'", "snu-2", []),
                 ]),
                 new Cat("A Curation of Fun Math Videos", "fun-cu", []),
             ]),
@@ -252,9 +251,13 @@ const iaoTree = new Cat("iao_root", "", [
             ], true),
             new Cat("2022-2", "2022-2", [
                 new Cat("자료구조 (문봉기)", "das", []),
+                new Cat("알고리즘 (문병로)", "alg", []),
                 new Cat("컴퓨터구조 (김진수)", "carch", []),
                 new Cat("전기전자회로 (하순회)", "eec", []),
-                new Cat("공학수학 3 (김찬중)", "enma3", []),
+                new Cat("공학수학 3 (김찬중)", "enma3", [], true, [{
+                    title: "YouTube Playlist: 피토스터디 '수치해석'",
+                    url: "https://www.youtube.com/playlist?list=PLIxff5DJJR7pETq1VTuA27LpFQMEURErF",
+                }]),
             ], true),
         ]),
     ]),
