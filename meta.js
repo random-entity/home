@@ -81,8 +81,8 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("A Curation of Fun Math Resources", "fun-cu", []),
             ]),
             new Cat("Computer Science & Engineering", "cse", [
+                new Cat("Electronic & Electrical Circuits for Computer Science", "eec-cs", []),
                 new Cat("Logic Circuit Design", "lcd", []),
-                new Cat("Electronic & Electrical Circuits", "eec", []),
                 new Cat("Computer Programming", "p", [
                     new Cat("C", "c", []),
                     new Cat("C++", "cpp", []),
@@ -99,7 +99,7 @@ const iaoTree = new Cat("iao_root", "", [
                         url: "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/",
                     }]),
                 ]),
-                new Cat("Computer Architecture", "carch", []),
+                new Cat("Computer Organization & Architecture", "coa", []),
                 new Cat("Systems Programming", "syspr", []),
                 new Cat("Operating Systems", "os", []),
                 new Cat("Theory of Programming Languages", "thlang", []),
@@ -114,6 +114,13 @@ const iaoTree = new Cat("iao_root", "", [
                             new Cat("Udemy Course 'The Web Developer Bootcamp 2022' by Colt Steele", "ud_colt-steele", [], true, [{
                                 title: "Udemy",
                                 url: "https://www.udemy.com/course/the-web-developer-bootcamp/learn/",
+                            }]),
+                            new Cat("생활코딩 WEB1 - HTML & The Internet", "shcd_web-1", [], true, [{
+                                title: "Youtube",
+                                url: "https://www.youtube.com/playlist?list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb"
+                            }, {
+                                title: "Opentutorials",
+                                url: "https://opentutorials.org/course/3084"
                             }]),
                         ]),
                         new Cat("Node.js", "njs", [

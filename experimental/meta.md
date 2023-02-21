@@ -1,4 +1,4 @@
-- tek_root_homepage
+- tek_root_github-pages
   - i [in]
     - mu [music]
       - db [database]
@@ -13,7 +13,7 @@
       - db [database]
       - cu [curation]
   - a [action]
-    - l [learning]
+    - l [learn]
     - p [plans]
     - snu [seoul-national-university]
       - sem [semesters]
