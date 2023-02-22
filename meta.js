@@ -129,13 +129,13 @@ const iaoTree = new Cat("iao_root", "", [
                                 url: "https://www.udemy.com/course/understanding-npm/learn/",
                             }])
                         ]),
+                        new Cat("React", "react", []),
                         new Cat("Electron.js", "ejs", [
                             new Cat("Udemy Course 'Master Electron: Desktop Apps with HTML, JavaScript & CSS' by Ray Viljoen", "ud_viljoen", [], true, [{
                                 title: "Udemy",
                                 url: "https://www.udemy.com/course/master-electron/learn/",
                             }])
                         ]),
-                        new Cat("React", "react", []),
                         new Cat("Typescript", "ts", []),
                     ]),
                 ]),
@@ -242,11 +242,6 @@ const iaoTree = new Cat("iao_root", "", [
                     new Cat("Houdini", "hdn", []),
                     new Cat("Blender", "bl", []),
                     new Cat("After Effects", "ae", []),
-                ]),
-            ]),
-            new Cat("Languages", "lang", [
-                new Cat("Japanese", "jp", [
-                    new Cat("EBSi 2023 수능 강의", "ebsi23", []),
                 ]),
             ]),
         ]),
