@@ -261,9 +261,9 @@ const tree_iao = new Cat("tree_iao", "", [
                 new Cat("컴퓨터프로그래밍 (이재욱)", "cp", []),
                 new Cat("논리설계 (이창건)", "lcd", []),
                 new Cat("IT-리더십세미나 (신영길)", "itlsem", []),
-                new Cat("언론정보문화특강 (이준환)", "ujt", []),
                 new Cat("고급수학 및 연습 1 (조철현, 류지연)", "hc", []),
                 new Cat("국내현장학습 (황지수)", "fs", []),
+                new Cat("언론정보문화특강 (이준환)", "ujt", []),
             ], true),
             new Cat("2022년 2학기", "22-2", [
                 new Cat("자료구조 (문봉기)", "das", []),
@@ -274,6 +274,8 @@ const tree_iao = new Cat("tree_iao", "", [
                     title: "YouTube Playlist: 피토스터디 '수치해석'",
                     url: "https://www.youtube.com/playlist?list=PLIxff5DJJR7pETq1VTuA27LpFQMEURErF",
                 }]),
+                new Cat("인터랙티브미디어 (배재혁)", "ime", []),
+                new Cat("산학연구실습 (임하진)", "ind", []),
             ], true),
             new Cat("2022년 겨울학기", "22-2.5", [
                 new Cat("선형대수학 (김형준)", "linal", []),
