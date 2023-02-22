@@ -71,7 +71,7 @@ const tree_iao = new Cat("tree_iao", "", [
                     }]),
                 ]),
                 new Cat("Differential Geometry", "dg", []),
-                new Cat("Abstract Algebra", "aal", []),
+                new Cat("Abstract Algebra", "al", []),
                 new Cat("Topology", "top", []),
                 new Cat("Number Theory", "num", []),
                 new Cat("Discrete Mathematics", "dma", []),
