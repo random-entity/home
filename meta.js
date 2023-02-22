@@ -8,12 +8,12 @@ class Cat {
     }
 }
 
-const iaoTree = new Cat("iao_root", "", [
+const tree_iao = new Cat("tree_iao", "", [
     new Cat("IN", "i", [
         new Cat("Music", "mu", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
-        ], true),
+        ]),
         new Cat("Film", "f", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
@@ -23,6 +23,10 @@ const iaoTree = new Cat("iao_root", "", [
             new Cat("Curation", "cu", []),
         ]),
         new Cat("Literature", "l", [
+            new Cat("Database", "db", []),
+            new Cat("Curation", "cu", []),
+        ]),
+        new Cat("Video Game", "g", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
         ]),
@@ -246,31 +250,41 @@ const iaoTree = new Cat("iao_root", "", [
             ]),
         ]),
         new Cat("SNU", "snu", [
-            new Cat("2021-2", "2021-2", [], true),
-            new Cat("2022-1", "2022-1", [
+            new Cat("2021년 2학기", "21-2", [
+                new Cat("컴퓨터프로그래밍 (이영기)", "cp", []),
+                new Cat("컴퓨터공학세미나 (김선)", "csem", []),
+                new Cat("미디어디자인프로젝트 2 (이준원)", "medp", []),
+                new Cat("모션그래픽디자인프로젝트 2 (정재은)", "modp", []),
+            ], true),
+            new Cat("2022년 1학기", "22-1", [
                 new Cat("이산수학 (문봉기)", "dma", []),
                 new Cat("컴퓨터프로그래밍 (이재욱)", "cp", []),
                 new Cat("논리설계 (이창건)", "lcd", []),
+                new Cat("IT-리더십세미나 (신영길)", "itlsem", []),
+                new Cat("언론정보문화특강 (이준환)", "ujt", []),
                 new Cat("고급수학 및 연습 1 (조철현, 류지연)", "hc", []),
+                new Cat("국내현장학습 (황지수)", "fs", []),
             ], true),
-            new Cat("2022-2", "2022-2", [
+            new Cat("2022년 2학기", "22-2", [
                 new Cat("자료구조 (문봉기)", "das", []),
                 new Cat("알고리즘 (문병로)", "alg", []),
                 new Cat("컴퓨터구조 (김진수)", "carch", []),
                 new Cat("전기전자회로 (하순회)", "eec", []),
-                new Cat("공학수학 3 (김찬중)", "enma3", [], true, [{
+                new Cat("공학수학 3 (김찬중)", "enma3", [], false, [{
                     title: "YouTube Playlist: 피토스터디 '수치해석'",
                     url: "https://www.youtube.com/playlist?list=PLIxff5DJJR7pETq1VTuA27LpFQMEURErF",
                 }]),
             ], true),
-        ]),
-        new Cat("Seoul Open Media", "som", []),
-        new Cat("Client Works", "cl", [
-            new Cat("네오바이오텍 영업비서 앱 프로토타입 UI 디자인 (2022)", "neo_app_sales-sec", []),
+            new Cat("2022년 겨울학기", "22-2.5", [
+                new Cat("선형대수학 (김형준)", "linal", []),
+                new Cat("배드민턴초급 (김정준)", "bad", []),
+                new Cat("사회봉사 1 (박현희)", "volun1", []),
+                new Cat("프로네시스 나눔실천단 2022 겨울 나눔교실 예산", "phro", []),
+            ], true)
         ]),
     ]),
     new Cat("OUT", "o", [
-        new Cat("Meta (Gears Inventory, Workflow & Guide)", "meta", [
+        new Cat("Meta (Gears Inventory & Guides)", "meta", [
             new Cat("Music", "mu", [
                 new Cat("Softwares", "sw", [
                     new Cat("DAWs", "daw", []),
@@ -286,7 +300,9 @@ const iaoTree = new Cat("iao_root", "", [
                 new Cat("Session 2017-2019", "s17-19", []),
                 new Cat("Session 2020-2022", "s20-22", []),
             ]),
-            new Cat("Art", "a", []),
+            new Cat("Art", "a", [
+                new Cat("Seoul Open Media", "som", []),
+            ]),
             new Cat("Film", "f", []),
             new Cat("Tools", "t", [
                 new Cat("Hilbert", "hlb", []),
@@ -308,16 +324,20 @@ const iaoTree = new Cat("iao_root", "", [
             ]),
             new Cat("Art", "a", [
                 new Cat("공간#1 (2021)", "sp1", []),
+                new Cat("공간#2 (2021)", "sp2", []),
+                new Cat("시간#1 (2015)", "t1", []),
                 new Cat("시간#3 (2021)", "t3", []),
                 new Cat("원 (2021, 공동작업)", "sowon-network", []),
-                new Cat("공간#2 (2021)", "sp2", []),
             ]),
             new Cat("Film", "f", [
                 new Cat("있다 (2021)", "itda", []),
             ]),
             new Cat("Literature", "lit", [
-                new Cat("시간#1 (2015)", "t1", []),
             ]),
+        ]),
+        new Cat("Client Works", "clw", [
+            new Cat("네오임플란트 CRM 앱 '영업비서' 프로토타입 UI 디자인 (2022)", "neo-crm-app", []),
+            new Cat("서울대학교 라이프아카데미 2023 프로모션 영상 (2023)", "o_clw_snula23", []),
         ]),
     ])
 ]);
@@ -349,13 +369,18 @@ function objectToNestedDivs(obj, tokenSnake, depth) {
         tokenSpan.innerHTML = obj.token;
     }
 
-    tokenSnake += "_" + obj.token;
+    if (depth === 0) {
+        tokenSnake = obj.token;
+    } else if (depth === 1) {
+        tokenSnake += obj.token;
+    } else {
+        tokenSnake += "_" + obj.token;
+    }
 
-    if (obj.children.length === 0 || obj.hasRepo === true) {
+    if (obj.hasRepo === true) {
         var ghLinkSpan = bar.appendChild(document.createElement('span'));
         ghLinkSpan.classList.add('link', 'github-link');
-        var repoName = tokenSnake.substring(2);
-        ghLinkSpan.innerHTML = `<a href="https://github.com/random-entity/${repoName}">${repoName}</a>`;
+        ghLinkSpan.innerHTML = `<a href="https://github.com/random-entity/${tokenSnake}">${tokenSnake}</a>`;
     }
 
     if (obj.extLinks && Array.isArray(obj.extLinks)) {
@@ -376,4 +401,4 @@ function objectToNestedDivs(obj, tokenSnake, depth) {
     return ul;
 }
 
-document.body.appendChild(objectToNestedDivs(iaoTree, "", 0));
+document.body.appendChild(objectToNestedDivs(tree_iao, "", 0));
