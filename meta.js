@@ -149,6 +149,7 @@ const tree_iao = new Cat("tree_iao", "", [
                 new Cat("Performance", "pf", [
                     new Cat("Voice", "v", []),
                     new Cat("Guitar", "gt", []),
+                    new Cat("Piano", "p", []),
                 ]),
                 new Cat("Music Theory", "th", []),
                 new Cat("Case Analyses", "an", []),
@@ -287,11 +288,14 @@ const tree_iao = new Cat("tree_iao", "", [
         ]),
     ]),
     new Cat("OUT", "o", [
-        new Cat("Meta (Gears Inventory & Guides)", "meta", [
+        new Cat("Libraries", "libs", [
+            new Cat("Music", "mu", []),
+        ]),
+        new Cat("Meta (Gears, Libraries & Guides)", "meta", [
             new Cat("Music", "mu", [
                 new Cat("Softwares", "sw", [
                     new Cat("Logic Pro", "lp", [
-                        new Cat("Logic Pro X", "x"),
+                        new Cat("Logic Pro X", "x", []),
                     ]),
                     new Cat("Ableton", "al", [
                         new Cat("Ableton Live 11 Suite", "11s", []),
