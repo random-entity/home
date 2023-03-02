@@ -291,7 +291,7 @@ const tree_iao = new Cat("tree_iao", "", [
         new Cat("Libraries", "libs", [
             new Cat("Music", "mu", []),
         ]),
-        new Cat("Meta (Gears, Libraries & Guides)", "meta", [
+        new Cat("Meta (Gears, Library Structure & Guides)", "meta", [
             new Cat("Music", "mu", [
                 new Cat("Softwares", "sw", [
                     new Cat("Logic Pro", "lp", [
