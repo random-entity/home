@@ -342,9 +342,10 @@ const tree_iao = new Cat("tree_iao", "", [
                     new Cat("병신EP", "ig", []),
                 ]),
                 new Cat("Session 2020-2024", "s20-24", [
-                    new Cat("an accompaniment for your disorientation", "afyd", []),
+                    new Cat("an accompaniment for your disorientation EP", "afyd", []),
                     new Cat("Happy Deathday and Lucid Dreams (Repackage)", "hdld", []),
                     new Cat("Babel", "b", []),
+                    new Cat("그리고 여전히 걷고 있다", "walk", []),
                 ]),
             ]),
             new Cat("Art", "a", [
@@ -385,8 +386,9 @@ const tree_iao = new Cat("tree_iao", "", [
             ]),
         ]),
         new Cat("Client Works", "clw", [
-            new Cat("네오임플란트 CRM 앱 '영업비서' 프로토타입 UI 디자인 (2022)", "neo-crm-app", []),
-            new Cat("서울대학교 라이프아카데미 2023 프로모션 영상 (2023)", "snula23", []),
+            new Cat("네오임플란트 CRM 앱 '영업비서' 프로토타입 UI 디자인 (2022)", "neo-crm-app", [], true),
+            new Cat("서울대학교 라이프아카데미 2023 프로모션 영상 (2023)", "snula23", [], true),
+            new Cat("새로랜드 시즌 1 오프닝곡 '새로토닌' 녹음 (2023)", "saerotonin", [], true),
         ]),
     ])
 ]);
