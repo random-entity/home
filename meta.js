@@ -294,24 +294,32 @@ const tree_iao = new Cat("tree_iao", "", [
         new Cat("Meta (Gears, Library Structure & Guides)", "meta", [
             new Cat("Music", "mu", [
                 new Cat("Softwares", "sw", [
-                    new Cat("Logic Pro", "lp", [
-                        new Cat("Logic Pro X", "x", []),
+                    new Cat("Apple", "ap", [
+                        new Cat("Logic Pro X", "lpx", []),
                     ]),
                     new Cat("Ableton", "al", [
                         new Cat("Ableton Live 11 Suite", "11s", []),
                     ]),
                     new Cat("Aberrant DSP", "ab", []),
-                    new Cat("Arturia", "ar", []),
+                    new Cat("Arturia", "ar", [
+                        new Cat("Pigments 3", "p3", []),
+                    ]),
                     new Cat("BABY Audio", "ba", []),
                     new Cat("chowdsp", "chow", []),
                     new Cat("Dada Life", "dl", []),
                     new Cat("FabFilter", "ff", []),
                     new Cat("Glitchmachines", "gm", []),
                     new Cat("iZotope", "iz", []),
-                    new Cat("Kilohearts", "kh", []),
+                    new Cat("Kilohearts", "kh", [
+                        new Cat("Phase Plant", "pp", []),
+                    ]),
                     new Cat("LennarDigital", "le", []),
                     new Cat("Native Instruments", "ni", [
-                        new Cat("Komplete 14 Ultimate", "k14u", []),
+                        new Cat("Komplete 14 Ultimate", "k14u", [
+                            new Cat("Kontakt", "kon", []),
+                            new Cat("Reaktor", "rkt", []),
+                            new Cat("Absynth", "ab", []),
+                        ]),
                     ]),
                     new Cat("Output", "op", []),
                     new Cat("Sonic Charge", "sc", []),
