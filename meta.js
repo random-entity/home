@@ -301,23 +301,50 @@ const tree_iao = new Cat("tree_iao", "", [
                     ]),
                     new Cat("Plugins", "pl", [
                         new Cat("Aberrant DSP", "ab", [
-                            new Cat("Digitalis", "dig", []),
-                            new Cat("ShapeShifter", "ss", []),
-                            new Cat("SketchCassette II", "sc", []),
+                            new Cat("Digitalis", "dig", [], false, [{
+                                title: "Bought from: Aberrant DSP",
+                                url: "https://aberrantdsp.com/my-account/downloads/",
+                            }]),
+                            new Cat("ShapeShifter", "ss", [], false, [{
+                                title: "Bought from: Aberrant DSP",
+                                url: "https://aberrantdsp.com/my-account/downloads/",
+                            }]),
+                            new Cat("SketchCassette II", "sc", [], false, [{
+                                title: "Bought from: Aberrant DSP",
+                                url: "https://aberrantdsp.com/my-account/downloads/",
+                            }]),
                         ]),
                         new Cat("Arturia", "ar", [
-                            new Cat("Pigments 3", "p3", []),
+                            new Cat("Pigments 3", "pig3", [], false, [{
+                                title: "Bought from: Arturia",
+                                url: "https://www.arturia.com/myarturia#products",
+                            }]),
                         ]),
                         new Cat("Audio Modern", "am", [
-                            new Cat("Filterstep", "fs", []),
-                            new Cat("Gatelab", "gl", []),
-                            new Cat("Panflow", "pf", []),
+                            new Cat("Filterstep", "fs", [], false, [{
+                                title: "Downloaded from: Audio Modern",
+                                url: "https://audiomodern.com/products/",
+                            }]),
+                            new Cat("Gatelab", "gl", [], false, [{
+                                title: "Downloaded from: Audio Modern",
+                                url: "https://audiomodern.com/products/",
+                            }]),
+                            new Cat("Panflow", "pf", [], false, [{
+                                title: "Downloaded from: Audio Modern",
+                                url: "https://audiomodern.com/products/",
+                            }]),
                         ]),
                         new Cat("BABY Audio", "ba", [
-                            new Cat("Crystalline", "cry", []),
+                            new Cat("Crystalline", "cry", [], false, [{
+                                title: "Not bought from: BABY Audio",
+                                url: "https://babyaud.io/all-plugins",
+                            }]),
                         ]),
                         new Cat("Cableguys", "cabg", [
-                            new Cat("PanCake 2", "pc2", []),
+                            new Cat("PanCake 2", "pc2", [], false, [{
+                                title: "Downloaded from: Cableguys",
+                                url: "cableguys.com/products.html",
+                            }]),
                         ]),
                         new Cat("chowdsp", "chow", [
                             new Cat("ChowMatrix", "cm", []),
@@ -338,18 +365,54 @@ const tree_iao = new Cat("tree_iao", "", [
                             new Cat("CardinalSynth", "carsyn", []),
                         ]),
                         new Cat("FabFilter", "ff", [
-                            new Cat("Pro-C 2", "c2", []),
-                            new Cat("Pro-DS", "ds", []),
-                            new Cat("Pro-G", "g", []),
-                            new Cat("Pro-L 2", "l2", []),
-                            new Cat("Pro-MB", "mb", []),
-                            new Cat("Pro-Q 3", "q3", []),
-                            new Cat("Pro-R", "r", []),
-                            new Cat("Saturn 2", "s2", []),
-                            new Cat("Pro-DS", "ds", []),
-                            new Cat("Timeless 3", "tim3", []),
-                            new Cat("Twin 2", "tw3", []),
-                            new Cat("Volcano 3", "vol3", []),
+                            new Cat("Pro-C 2", "c2", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-DS", "ds", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-G", "g", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-L 2", "l2", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-MB", "mb", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-Q 3", "q3", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-R", "r", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Saturn 2", "s2", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Pro-DS", "ds", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Timeless 3", "tim3", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Twin 2", "tw2", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
+                            new Cat("Volcano 3", "vol3", [], false, [{
+                                title: "Bought from: FabFilter",
+                                url: "https://www.fabfilter.com/myaccount",
+                            }]),
                         ]),
                         new Cat("Glitchmachines", "gm", [
                             new Cat("Cataract2", "cat2", []),
@@ -362,7 +425,10 @@ const tree_iao = new Cat("tree_iao", "", [
                             new Cat("Quadrant", "quad", []),
                             new Cat("Subvert", "sub", []),
                             new Cat("Tactic", "tac", []),
-                        ]),
+                        ], false, [{
+                            title: "Bought from: Plugin Boutique",
+                            url: "https://www.pluginboutique.com/myaccount",
+                        }]),
                         new Cat("iZotope", "iz", [
                             new Cat("Iris 2", "i2", []),
                             new Cat("Nectar 3 Elements", "nec3e", []),
@@ -391,12 +457,22 @@ const tree_iao = new Cat("tree_iao", "", [
                             new Cat("Kontakt 7", "kon7", []),
                             new Cat("Reaktor 6", "rkt6", []),
                             new Cat("Super 8", "sup8", []),
-                        ]),
+                        ], false, [{
+                            title: "Bought from: Native Instruments",
+                            url: "https://www.native-instruments.com/en/account/orders/",
+                        }]),
                         new Cat("Noise Engineering", "ne", []),
                         new Cat("Output", "op", [
-                            new Cat("Movement", "m", []),
+                            new Cat("Movement", "m", [], false, [{
+                                title: "Bought from: Splice",
+                                url: "https://splice.com/plugins/your-plugins",
+                            }]),
                             new Cat("Portal", "p", []),
-                        ]),
+                            new Cat("REV", "rev", [])
+                        ], false, [{
+                            title: "Bought from: Output",
+                            url: "https://output.com/account/downloads",
+                        }]),
                         new Cat("Photosounder", "ps", []),
                         new Cat("Plugin Boutique", "pb", [
                             new Cat("Scaler 2", "sc2", []),
