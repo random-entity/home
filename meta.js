@@ -213,7 +213,7 @@ const tree_iao = new Cat("tree_iao", "", [
                     ]),
                 ]),
             ]),
-            new Cat("Computer-Aided Art", "ca", [
+            new Cat("Computer-Based Art", "cba", [
                 new Cat("History of New Media Art", "nma-his", []),
                 new Cat("Computer Graphics", "cg", [
                     new Cat("History of Computer Graphics", "his", []),
@@ -294,44 +294,169 @@ const tree_iao = new Cat("tree_iao", "", [
         new Cat("Meta (Gears, Library Structure & Guides)", "meta", [
             new Cat("Music", "mu", [
                 new Cat("Softwares", "sw", [
-                    new Cat("Apple", "ap", [
+                    new Cat("DAWs", "daw", [
+                        new Cat("Ableton Live 11 Suite", "al11s", []),
                         new Cat("Logic Pro X", "lpx", []),
+                        new Cat("Reaper 6", "rpr6", []),
                     ]),
-                    new Cat("Ableton", "al", [
-                        new Cat("Ableton Live 11 Suite", "11s", []),
-                    ]),
-                    new Cat("Aberrant DSP", "ab", []),
-                    new Cat("Arturia", "ar", [
-                        new Cat("Pigments 3", "p3", []),
-                    ]),
-                    new Cat("BABY Audio", "ba", []),
-                    new Cat("chowdsp", "chow", []),
-                    new Cat("Dada Life", "dl", []),
-                    new Cat("FabFilter", "ff", []),
-                    new Cat("Glitchmachines", "gm", []),
-                    new Cat("iZotope", "iz", []),
-                    new Cat("Kilohearts", "kh", [
-                        new Cat("Phase Plant", "pp", []),
-                    ]),
-                    new Cat("LennarDigital", "le", []),
-                    new Cat("Native Instruments", "ni", [
-                        new Cat("Komplete 14 Ultimate", "k14u", [
-                            new Cat("Kontakt", "kon", []),
-                            new Cat("Reaktor", "rkt", []),
-                            new Cat("Absynth", "ab", []),
+                    new Cat("Plugins", "pl", [
+                        new Cat("Aberrant DSP", "ab", [
+                            new Cat("Digitalis", "dig", []),
+                            new Cat("ShapeShifter", "ss", []),
+                            new Cat("SketchCassette II", "sc", []),
+                        ]),
+                        new Cat("Arturia", "ar", [
+                            new Cat("Pigments 3", "p3", []),
+                        ]),
+                        new Cat("Audio Modern", "am", [
+                            new Cat("Filterstep", "fs", []),
+                            new Cat("Gatelab", "gl", []),
+                            new Cat("Panflow", "pf", []),
+                        ]),
+                        new Cat("BABY Audio", "ba", [
+                            new Cat("Crystalline", "cry", []),
+                        ]),
+                        new Cat("Cableguys", "cabg", [
+                            new Cat("PanCake 2", "pc2", []),
+                        ]),
+                        new Cat("chowdsp", "chow", [
+                            new Cat("ChowMatrix", "cm", []),
+                            new Cat("CHOWTapeModel", "tm", []),
+                        ]),
+                        new Cat("Dada Life", "dl", [
+                            new Cat("Endless Smile", "es", []),
+                            new Cat("Sausage Fattener", "sf", []),
+                        ]),
+                        new Cat("Daniel Gergely", "dg", [
+                            new Cat("Emergence", "em", []),
+                        ]),
+                        new Cat("Decidedly", "dec", [
+                            new Cat("DecentSampler", "decsam", []),
+                        ]),
+                        new Cat("DISTRHO", "dis", [
+                            new Cat("CardinalFX", "carfx", []),
+                            new Cat("CardinalSynth", "carsyn", []),
+                        ]),
+                        new Cat("FabFilter", "ff", [
+                            new Cat("Pro-C 2", "c2", []),
+                            new Cat("Pro-DS", "ds", []),
+                            new Cat("Pro-G", "g", []),
+                            new Cat("Pro-L 2", "l2", []),
+                            new Cat("Pro-MB", "mb", []),
+                            new Cat("Pro-Q 3", "q3", []),
+                            new Cat("Pro-R", "r", []),
+                            new Cat("Saturn 2", "s2", []),
+                            new Cat("Pro-DS", "ds", []),
+                            new Cat("Timeless 3", "tim3", []),
+                            new Cat("Twin 2", "tw3", []),
+                            new Cat("Volcano 3", "vol3", []),
+                        ]),
+                        new Cat("Glitchmachines", "gm", [
+                            new Cat("Cataract2", "cat2", []),
+                            new Cat("Convex", "cvx", []),
+                            new Cat("Cryogen", "cry", []),
+                            new Cat("Fracture XT", "fxt", []),
+                            new Cat("Hysteresis", "hys", []),
+                            new Cat("Palindrome", "pal", []),
+                            new Cat("Polygon2", "pol2", []),
+                            new Cat("Quadrant", "quad", []),
+                            new Cat("Subvert", "sub", []),
+                            new Cat("Tactic", "tac", []),
+                        ]),
+                        new Cat("iZotope", "iz", [
+                            new Cat("Iris 2", "i2", []),
+                            new Cat("Nectar 3 Elements", "nec3e", []),
+                            new Cat("Neutron 3 Elements", "neu3e", []),
+                            new Cat("Ozone 10", "o10", []),
+                            new Cat("RX 8", "rx8", []),
+                            new Cat("Stutter Edit 2", "se2", []),
+                            new Cat("VocalSynth 2", "vs2", []),
+                        ]),
+                        new Cat("Kilohearts", "kh", [
+                            new Cat("Phase Plant", "pp", []),
+                        ]),
+                        new Cat("LennarDigital", "le", [
+                            new Cat("Sylenth1", "s1", []),
+                        ]),
+                        new Cat("Madrona Labs", "ml", [
+                            new Cat("Aalto", "aa", []),
+                        ]),
+                        new Cat("Native Instruments", "ni", [
+                            new Cat("Absynth 5", "ab5", []),
+                            new Cat("Battery 4", "ba4", []),
+                            new Cat("FM8", "fm8", []),
+                            new Cat("Maschine 2", "ma2", []),
+                            new Cat("Massive", "mas", []),
+                            new Cat("Massive X", "masx", []),
+                            new Cat("Kontakt 7", "kon7", []),
+                            new Cat("Reaktor 6", "rkt6", []),
+                            new Cat("Super 8", "sup8", []),
+                        ]),
+                        new Cat("Noise Engineering", "ne", []),
+                        new Cat("Output", "op", [
+                            new Cat("Movement", "m", []),
+                            new Cat("Portal", "p", []),
+                        ]),
+                        new Cat("Photosounder", "ps", []),
+                        new Cat("Plugin Boutique", "pb", [
+                            new Cat("Scaler 2", "sc2", []),
+                        ]),
+                        new Cat("Sonic Charge", "sc", [
+                            new Cat("Bitspeek", "bs", []),
+                            new Cat("Echobode", "ec", []),
+                            new Cat("Microtonic", "mt", []),
+                            new Cat("Permut8", "p8", []),
+                            new Cat("Synplant", "sp", []),
+                        ]),
+                        new Cat("Soundtoys", "st", [
+                            new Cat("Crystallizer", "cr", []),
+                            new Cat("Decapitator", "dec", []),
+                            new Cat("Devil-Loc", "dl", []),
+                            new Cat("EchoBoy", "eb", []),
+                            new Cat("FilterFreak", "ff", []),
+                            new Cat("Little Alterboy", "la", []),
+                            new Cat("Little Plate", "lp", []),
+                            new Cat("MicroShift", "lms", []),
+                            new Cat("PanMan", "pm", []),
+                            new Cat("PhaseMistress", "phm", []),
+                            new Cat("PrimalTap", "pt", []),
+                            new Cat("Radiator", "ra", []),
+                            new Cat("Sie-Q", "sq", []),
+                            new Cat("Tremolator", "trem", []),
+                        ]),
+                        new Cat("Spectrasonics", "sp", [
+                            new Cat("Omnisphere", "om", []),
+                        ]),
+                        new Cat("Surge Synth Team", "sst", [
+                            new Cat("Surge XT", "sxt", []),
+                        ]),
+                        new Cat("u-he", "uhe", [
+                            new Cat("Bazille", "bz", []),
+                            new Cat("Diva", "diva", []),
+                            new Cat("Hive", "hive", []),
+                            new Cat("Repro-1", "r1", []),
+                            new Cat("Repro-5", "r5", []),
+                            new Cat("TripleCheese", "tc", []),
+                            new Cat("Zebra 2", "z2", []),
+                        ]),
+                        new Cat("Valhalla DSP, LLC", "val", [
+                            new Cat("ValhallaDelay", "del", []),
+                            new Cat("ValhallaFreqEcho", "freq", []),
+                            new Cat("ValhallaPlate", "pl", []),
+                            new Cat("ValhallaRoom", "room", []),
+                            new Cat("ValhallaShimmer", "shim", []),
+                            new Cat("ValhallaSpaceModulator", "spm", []),
+                            new Cat("ValhallaSupermassive", "sup", []),
+                            new Cat("ValhallaVintageVerb", "vv", []),
+                        ]),
+                        new Cat("Vital Audio", "vita", [
+                            new Cat("Vital", "v", []),
+                        ]),
+                        new Cat("Xfer Records", "xf", [
+                            new Cat("Serum", "ser", []),
                         ]),
                     ]),
-                    new Cat("Output", "op", []),
-                    new Cat("Sonic Charge", "sc", []),
-                    new Cat("Soundtoys", "st", []),
-                    new Cat("Spectrasonics", "sp", [
-                        new Cat("Omnisphere", "om", []),
-                    ]),
-                    new Cat("u-he", "uhe", [
-                        new Cat("Zebra 2", "z2", []),
-                    ]),
-                    new Cat("Valhalla", "val", []),
-                    new Cat("Xfer Records", "xf", []),
+
                 ]),
                 new Cat("Harwares", "hw", []),
             ]),
@@ -350,7 +475,7 @@ const tree_iao = new Cat("tree_iao", "", [
                     new Cat("병신EP", "ig", []),
                 ]),
                 new Cat("Session 2020-2024", "s20-24", [
-                    new Cat("an accompaniment for your disorientation EP", "afyd", []),
+                    new Cat("(an accompaniment for your disorientation) EP", "afyd", []),
                     new Cat("Happy Deathday and Lucid Dreams (Repackage)", "hdld", []),
                     new Cat("Babel", "b", []),
                     new Cat("그리고 여전히 걷고 있다", "walk", []),
@@ -378,7 +503,9 @@ const tree_iao = new Cat("tree_iao", "", [
                     title: "Bandcamp",
                     url: "https://yakpanteki.bandcamp.com/album/ep",
                 }]),
-                new Cat("afyd (TBD)", "afyd", []),
+                new Cat("(an accompaniment for your disorientation) EP (2023)", "afyd", []),
+                new Cat("Happy Deathday and Lucid Dreams (Repackage) (2023)", "hdld", []),
+                new Cat("Babel (2024)", "b", []),
             ]),
             new Cat("Art", "a", [
                 new Cat("공간#1 (2021)", "sp1", []),
@@ -389,6 +516,7 @@ const tree_iao = new Cat("tree_iao", "", [
             ]),
             new Cat("Film", "f", [
                 new Cat("있다 (2021)", "itda", []),
+                new Cat("잃어버린 것 (2024)", "lost", []),
             ]),
             new Cat("Literature", "lit", [
             ]),
