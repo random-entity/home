@@ -297,7 +297,7 @@ const tree_iao = new Cat("tree_iao", "", [
                     new Cat("DAWs", "daw", [
                         new Cat("Ableton Live 11 Suite", "al11s", []),
                         new Cat("Logic Pro X", "lpx", []),
-                        new Cat("Reaper 6", "rpr6", []),
+                        new Cat("Reaper", "rpr", []),
                     ]),
                     new Cat("Plugins", "pl", [
                         new Cat("Aberrant DSP", "ab", [
@@ -313,13 +313,19 @@ const tree_iao = new Cat("tree_iao", "", [
                                 title: "Bought from: Aberrant DSP",
                                 url: "https://aberrantdsp.com/my-account/downloads/",
                             }]),
-                        ]),
+                        ], false, [{
+                            title: "Aberrant DSP",
+                            url: "https://aberrantdsp.com/",
+                        }]),
                         new Cat("Arturia", "ar", [
-                            new Cat("Pigments 3", "pig3", [], false, [{
+                            new Cat("Pigments", "pg", [], false, [{
                                 title: "Bought from: Arturia",
                                 url: "https://www.arturia.com/myarturia#products",
                             }]),
-                        ]),
+                        ], false, [{
+                            title: "Arturia",
+                            url: "https://www.arturia.com/",
+                        }]),
                         new Cat("Audio Modern", "am", [
                             new Cat("Filterstep", "fs", [], false, [{
                                 title: "Downloaded from: Audio Modern",
@@ -333,27 +339,58 @@ const tree_iao = new Cat("tree_iao", "", [
                                 title: "Downloaded from: Audio Modern",
                                 url: "https://audiomodern.com/products/",
                             }]),
-                        ]),
+                        ], false, [{
+                            title: "Audio Modern",
+                            url: "https://audiomodern.com/",
+                        }]),
                         new Cat("BABY Audio", "ba", [
                             new Cat("Crystalline", "cry", [], false, [{
                                 title: "Not bought from: BABY Audio",
                                 url: "https://babyaud.io/all-plugins",
                             }]),
-                        ]),
+                            new Cat("Smooth Operator", "so", [], false, [{
+                                title: "Not bought from: BABY Audio",
+                                url: "https://babyaud.io/all-plugins",
+                            }]),
+                        ], false, [{
+                            title: "BABY Audio",
+                            url: "https://babyaud.io/"
+                        }]),
                         new Cat("Cableguys", "cabg", [
                             new Cat("PanCake 2", "pc2", [], false, [{
                                 title: "Downloaded from: Cableguys",
                                 url: "cableguys.com/products.html",
                             }]),
-                        ]),
+                        ], false, [{
+                            title: "Cableguys",
+                            url: "https://www.cableguys.com/"
+                        }]),
                         new Cat("chowdsp", "chow", [
-                            new Cat("ChowMatrix", "cm", []),
-                            new Cat("CHOWTapeModel", "tm", []),
-                        ]),
+                            new Cat("ChowMatrix", "cm", [], false, [{
+                                title: "Downloaded from: Chowdhury DSP",
+                                url: "https://chowdsp.com/products.html"
+                            }]),
+                            new Cat("CHOWTapeModel", "tm", [], false, [{
+                                title: "Downloaded from: Chowdhury DSP",
+                                url: "https://chowdsp.com/products.html"
+                            }]),
+                        ], false, [{
+                            title: "Chowdhury DSP",
+                            url: "https://chowdsp.com/index.html",
+                        }]),
                         new Cat("Dada Life", "dl", [
-                            new Cat("Endless Smile", "es", []),
-                            new Cat("Sausage Fattener", "sf", []),
-                        ]),
+                            new Cat("Endless Smile", "es", [], false, [{
+                                title: "Bought from: Dada Life",
+                                url: "https://dadalife.com/plugins/",
+                            }]),
+                            new Cat("Sausage Fattener", "sf", [], false, [{
+                                title: "Bought from: Dada Life",
+                                url: "https://dadalife.com/plugins/",
+                            }]),
+                        ], false, [{
+                            title: "Dada Life",
+                            url: "https://dadalife.com/plugins/",
+                        }]),
                         new Cat("Daniel Gergely", "dg", [
                             new Cat("Emergence", "em", []),
                         ]),
@@ -413,7 +450,10 @@ const tree_iao = new Cat("tree_iao", "", [
                                 title: "Bought from: FabFilter",
                                 url: "https://www.fabfilter.com/myaccount",
                             }]),
-                        ]),
+                        ], false, [{
+                            title: "FabFilter",
+                            url: "https://www.fabfilter.com/"
+                        }]),
                         new Cat("Glitchmachines", "gm", [
                             new Cat("Cataract2", "cat2", []),
                             new Cat("Convex", "cvx", []),
