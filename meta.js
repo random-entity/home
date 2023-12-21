@@ -10,19 +10,23 @@ class Cat {
 
 const tree_iao = new Cat("tree_iao", "", [
     new Cat("IN", "i", [
-        new Cat("Music", "mu", [
-            new Cat("Database", "db", []),
-            new Cat("Curation", "cu", []),
+        new Cat("Academics", "ac", [
+            new Cat("Philosophy", "phil", []),
+            new Cat("Mathematics", "ma", []),
         ]),
         new Cat("Art", "a", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
         ]),
-        new Cat("Film", "f", [
+        new Cat("Music", "mu", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
         ]),
         new Cat("Literature", "l", [
+            new Cat("Database", "db", []),
+            new Cat("Curation", "cu", []),
+        ]),
+        new Cat("Film", "f", [
             new Cat("Database", "db", []),
             new Cat("Curation", "cu", []),
         ]),
